@@ -5,9 +5,9 @@ import Link from "next/link";
 import { urlFor } from "../sanity";
 import { PageInfo } from "../typings";
 
-type Props = { pageinfo: PageInfo };
+type Props = { pageInfo: PageInfo };
 
-const Hero = ({ pageInfo }: Props) => {
+export default function Hero({ pageInfo }: Props) {
   const [text, count] = useTypewriter({
     words: [
       `Hi, the name's ${pageInfo?.name}`,
@@ -50,6 +50,4 @@ const Hero = ({ pageInfo }: Props) => {
       </div>
     </div>
   );
-};
-
-export default Hero;
+}

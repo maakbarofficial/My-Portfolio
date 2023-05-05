@@ -11,7 +11,7 @@ type Inputs = {
   message: string;
 };
 
-type Props = {};
+type Props = { pageInfo: PageInfo };
 
 const ContactMe = ({ pageInfo }: Props) => {
   const { register, handleSubmit } = useForm<Inputs>();
