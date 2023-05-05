@@ -24,13 +24,7 @@ type Props = {
   socials: Social[];
 };
 
-export default function Home({
-  pageInfo,
-  experiences,
-  projects,
-  skills,
-  socials,
-}: Props) {
+const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
   return (
     <>
       <Head>
@@ -71,7 +65,9 @@ export default function Home({
       </div>
     </>
   );
-}
+};
+
+export default Home;
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const pageInfo = await fetchPageInfo();
